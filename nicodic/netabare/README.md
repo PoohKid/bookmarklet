@@ -5,4 +5,4 @@
 そのため強調表示で赤にしてる箇所などもリセットされてしまう恐れがありますが気にしない方向で
 
 ■これをブックマーク  
-`javascript:(function(){javascript: (function() {    $("#article [style*=color]").css("color", "");})()})()`
+`javascript:(function(){javascript:(function(){$("#article [style*=color]").css("color", "");})()})()`
