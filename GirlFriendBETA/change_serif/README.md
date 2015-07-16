@@ -2,8 +2,10 @@
 マイページのセリフを任意のものに変更します  
 2ch の拾い物でしたが最近動かなかったので修正しました
 
+* 2015.06.29 の UI リニューアルに対応
+
 ■これをブックマーク  
-`javascript:(function(){var div=document.getElementById('girlsComment');div.style.display='block';var input=document.createElement('input');input.type='text';input.value=div.innerText;input.onchange=function(){var p=document.createElement('p');p.innerText=input.value;div.replaceChild(p,div.getElementsByTagName('input')[0]);if(!input.value)div.style.display='none';};div.replaceChild(input,div.getElementsByTagName('p')[0]);input.select();})()`
+`javascript:(function(){var div=document.querySelector('div.js_topGirlComment.topGirlComment');div.style.opacity=100;var input=document.createElement('input');input.type='text';input.style.width="100%";input.value=div.innerText;input.onchange=function(){div.innerText=input.value;if(input.parentNode)input.parentNode.removeChild(input);if(!input.value)div.style.opacity=0;};div.innerText='';div.appendChild(input);input.select();})()`
 
 ## サンプル
 ![chloe](./chloe.png)
