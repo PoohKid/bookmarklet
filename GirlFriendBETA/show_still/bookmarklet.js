@@ -3,6 +3,7 @@ var swipeList = document.querySelectorAll('div.moduleSwipeList');
 for (var i=0; i < swipeList.length; i++) {
     if (swipeList[i].style.webkitTransform.match(/^translate3d\(0px/)) {
         swipe = swipeList[i];
+        break;
     }
 }
 if (!swipe) return;
